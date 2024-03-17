@@ -15,18 +15,19 @@ module.exports = {
 
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.css'],
     alias: {
       '': path.resolve(__dirname, '..', 'src'),
-      'assets': path.resolve(__dirname, '..', 'src/assets/'),
+      'config': path.resolve(__dirname, '..', 'src/config/'),
       'components': path.resolve(__dirname, '..', 'src/components/'),
       'models': path.resolve(__dirname, '..', 'src/models/'),
       'pages': path.resolve(__dirname, '..', 'src/pages/'),
       'store': path.resolve(__dirname, '..', 'src/store/'),
       'routes': path.resolve(__dirname, '..', 'src/routes/'),
-      'config': path.resolve(__dirname, '..', 'src/config/'),
-      'security': path.resolve(__dirname, '..', 'src/security/'),
-
+      'hooks': path.resolve(__dirname, '..', 'src/hooks/'),
+      'utils': path.resolve(__dirname, '..', 'src/utils/'),
+      '': path.resolve(__dirname, '..', 'public'),
+      'config': path.resolve(__dirname, '..', 'public/css/'),
     },
   },
   module: {
@@ -63,12 +64,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'SMH-ServiceManagementHub',
+      title: 'CarFleet',
       filename: 'index.html',
-      template: path.resolve(__dirname, '..', './src/template.html'),
+      template: path.resolve(__dirname, '..', './public/template.html'),
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '..', 'src/assets/resource/favicon.ico'),
+      logo: path.resolve(__dirname, '..', 'public/images/logo.ico'),
       prefix: '',
       outputPath: path.resolve(__dirname, '..', 'dist/public/resource'),
       inject: (htmlPlugin) =>
@@ -77,8 +78,3 @@ module.exports = {
   ],
   stats: 'errors-only',
 }
-// new CopyPlugin({
-//       patterns: [
-//           { from: "src/assets", to: "public" }
-//       ],
-//   })
