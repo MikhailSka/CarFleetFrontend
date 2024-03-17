@@ -69,7 +69,7 @@ module.exports = {
       template: path.resolve(__dirname, '..', './public/template.html'),
     }),
     new FaviconsWebpackPlugin({
-      logo: path.resolve(__dirname, '..', 'public/images/logo.ico'),
+      logo: path.resolve(__dirname, '..', 'public/images/logo.png'),
       prefix: '',
       outputPath: path.resolve(__dirname, '..', 'dist/public/resource'),
       inject: (htmlPlugin) =>
