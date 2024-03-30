@@ -7,8 +7,8 @@ import TripsPage from 'pages/TripsPage'
 import CarsPage from 'pages/CarsPage'
 import StatisticsPage from 'pages/StatisticsPage'
 import MaintenancePage from 'pages/MaintenancePage'
-import UnauthorizedPage from 'pages/UnauthorizedPage'
-import NotFound from 'pages/NotFound'
+import UnauthorizedPage from 'pages/errors/UnauthorizedPage'
+import NotFound from 'pages/errors/NotFound'
 import { ProtectedRoute } from './ProtectedRoute'
 
 function AppRouter(): React.ReactNode {
@@ -17,7 +17,7 @@ function AppRouter(): React.ReactNode {
       <Routes>
         <Route
           path="/"
-          element={<ProtectedRoute roles={[]} element={<HomePage />} />}
+          element={<HomePage />}//<ProtectedRoute roles={[]} element={<HomePage />} />
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
