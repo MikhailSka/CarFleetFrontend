@@ -35,7 +35,7 @@ jobs:
       run: mvn test
 
     - name: Static code analysis
-      uses: findbugs:check
+      run: mvn findbugs:check 
 
     - name: Linting and formatting
       run: |
