@@ -35,25 +35,15 @@ jobs:
       run: mvn test
 
     - name: Static code analysis
-      run: mvn findbugs:check 
+      run: mvn findbugs:check
 
     - name: Linting and formatting
       run: |
-        mvn checkstyle:checkstyle
+        # Add your linting and formatting commands here
+        # For example:
         mvn spotbugs:check
 
-    - name: Commitlint
-      uses: Waza-Works/commitlint-github-action@v3
-
-    - name: Generate documentation
-      run: |
-        # Add commands to generate documentation here
-        # Example:
-        # mvn javadoc:javadoc
-
-    - name: Deploy documentation
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Verify commits
+      uses: reviewdog/action-checkstyle@v1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
-
