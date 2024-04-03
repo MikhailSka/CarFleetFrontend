@@ -35,7 +35,7 @@ jobs:
       run: mvn test
 
     - name: Static code analysis
-      uses: find-sec-bugs/find-sec-bugs@v1
+      uses: findbugs:check
 
     - name: Linting and formatting
       run: |
