@@ -1,9 +1,12 @@
-import React from "react"
+import React from 'react'
 
-import AppRouter from "routes/Router"
+import AppRouter from 'routes/Router'
+import { ThemeProviderWrapper } from 'theme/context/ThemeProviderWrapper'
 
-function App(): React.ReactNode {
-  return <AppRouter />
-}
+const App: React.FC = () => (
+  <ThemeProviderWrapper>
+    <AppRouter />
+  </ThemeProviderWrapper>
+)
 
 export default App

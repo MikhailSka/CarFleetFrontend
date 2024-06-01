@@ -6,7 +6,6 @@ import MUIDataTable, {
   MUIDataTableState,
   MUIDataTableBody
 } from 'mui-datatables'
-import { CircularProgress, Box, IconButton } from '@mui/material'
 import { useDebounce } from 'hooks/useDebounce'
 import { LoadingTableBody } from './LoadingTableBody'
 import EditIcon from '@mui/icons-material/Edit'
@@ -51,7 +50,7 @@ const DataTable: React.FC<DataTableProps> = ({ url, columns }) => {
           },
         })
         console.log(response.data)
-        setData(response.data.data) // Assuming response structure {data: [], total: number}
+        setData(response.data.data) 
         setTotal(response.data.total)
       } catch (error) {
         console.error('Error fetching data:', error)
@@ -76,7 +75,7 @@ const DataTable: React.FC<DataTableProps> = ({ url, columns }) => {
     filter: false,
     filterType: 'checkbox',
     responsive: 'standard',
-    count: total, // Set the total count
+    count: total, 
     onTableChange: (action, tableState: MUIDataTableState) => {
       switch (action) {
         case 'changePage':
