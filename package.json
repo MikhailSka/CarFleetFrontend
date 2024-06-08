@@ -23,6 +23,7 @@
     "@mui/styles": "^5.14.4",
     "@phosphor-icons/react": "^2.0.15",
     "@reduxjs/toolkit": "^1.9.3",
+    "ajv": "^8.16.0",
     "axios": "^1.4.0",
     "browser-image-compression": "^2.0.2",
     "dayjs": "^1.11.7",

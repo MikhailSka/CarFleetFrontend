@@ -4,6 +4,6 @@ import HomePage from 'pages/user/HomePage'
 
 
 test('renders correctly and matches snapshot', () => {
-  const { asFragment } = render(<MyComponent />);
+  const { asFragment } = render(<HomePage />);
   expect(asFragment()).toMatchSnapshot();
 });

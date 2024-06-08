@@ -26,6 +26,8 @@ module.exports = {
       'routes': path.resolve(__dirname, '..', 'src/routes/'),
       'hooks': path.resolve(__dirname, '..', 'src/hooks/'),
       'utils': path.resolve(__dirname, '..', 'src/utils/'),
+      'theme': path.resolve(__dirname, '..', 'src/theme/'),
+      'test': path.resolve(__dirname, '..', 'test/'),
       '': path.resolve(__dirname, '..', 'public'),
       'config': path.resolve(__dirname, '..', 'public/css/'),
     },

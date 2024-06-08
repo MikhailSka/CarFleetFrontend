@@ -25,6 +25,8 @@
       "routes/*": ["./src/routes/*"],
       "hooks/*": ["./src/hooks/*"],
       "utils/*": ["./src/utils/*"],
+      "theme/*": ["./src/theme/*"],
+      "test/*": ["./test/*"],
       "css/*": ["./public/css/*"],
       "images/*": ["./public/images/*"],
     },
